@@ -16,7 +16,7 @@ export default function PersonalInfoStep({ personalInfo, onChange, onNext, forma
         
         <div className="space-y-2">
           <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
-            <MapPin size={16} className="text-emerald-600" /> City
+            <MapPin size={16} className="text-emerald-600" /> City / District
           </label>
           <select name="city" required value={personalInfo.city} onChange={onChange}
             className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all">

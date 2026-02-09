@@ -38,7 +38,34 @@ const COLOR_VARIANTS = {
 export default function OverviewTab({ recentActivities, setActiveTab }: OverviewTabProps) {
   return (
     <div className="animate-in fade-in duration-500 space-y-8">
-      
+      {/* 3. Upcoming Test Alert (High Priority) */}
+      <div className="relative overflow-hidden bg-slate-900 rounded-2xl p-6 text-white shadow-xl">
+        {/* Subtle background decoration */}
+        <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+        
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div className="flex items-start gap-4">
+            <div className="bg-orange-500/20 p-3 rounded-xl border border-orange-500/30">
+              <Calendar className="text-orange-400" size={24} />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="bg-orange-500 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Priority</span>
+                <h4 className="text-lg font-bold">Upcoming Test Reminder</h4>
+              </div>
+              <p className="text-slate-300 text-sm leading-relaxed max-w-md">
+                Your test for <span className="text-white font-medium">Data Entry Operator</span> is scheduled for 
+                <span className="text-white font-medium"> Feb 25, 2026</span> at the Quetta Center.
+              </p>
+            </div>
+          </div>
+          
+          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-xl font-bold text-sm hover:bg-slate-100 transition-all active:scale-95 shadow-lg shadow-black/20">
+            <Download size={16} />
+            Download Admit Card
+          </button>
+        </div>
+      </div>
       {/* 1. Recent Activity Section */}
       <section>
         <div className="flex items-center justify-between mb-5">
@@ -101,34 +128,7 @@ export default function OverviewTab({ recentActivities, setActiveTab }: Overview
         </div>
       </section>
 
-      {/* 3. Upcoming Test Alert (High Priority) */}
-      <div className="relative overflow-hidden bg-slate-900 rounded-2xl p-6 text-white shadow-xl">
-        {/* Subtle background decoration */}
-        <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-        
-        <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div className="flex items-start gap-4">
-            <div className="bg-orange-500/20 p-3 rounded-xl border border-orange-500/30">
-              <Calendar className="text-orange-400" size={24} />
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="bg-orange-500 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">Priority</span>
-                <h4 className="text-lg font-bold">Upcoming Test Reminder</h4>
-              </div>
-              <p className="text-slate-300 text-sm leading-relaxed max-w-md">
-                Your test for <span className="text-white font-medium">Data Entry Operator</span> is scheduled for 
-                <span className="text-white font-medium"> Feb 25, 2026</span> at the Quetta Center.
-              </p>
-            </div>
-          </div>
-          
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-xl font-bold text-sm hover:bg-slate-100 transition-all active:scale-95 shadow-lg shadow-black/20">
-            <Download size={16} />
-            Download Admit Card
-          </button>
-        </div>
-      </div>
+      
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default function EducationStep({ selectedLevel, levels, onLevelSelect, en
       <div className="space-y-6">
         {entries.map((entry: any, idx: number) => (
           <div key={idx} className="relative p-6 bg-slate-50 rounded-3xl border border-slate-100 space-y-4">
-            <div className="flex items-center gap-2 text-emerald-600 font-black italic uppercase text-xs">
+            <div className="flex items-center gap-2 text-emerald-600 font-black  uppercase text-xs">
               <CheckCircle2 size={14} /> Level {idx + 1}: {entry.level}
             </div>
             
