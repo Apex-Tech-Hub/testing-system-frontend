@@ -76,7 +76,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Main Content Area */}
-        <div className="bg-white rounded-[2rem] shadow-2xl shadow-slate-200/50 mb-8 border border-slate-100 overflow-hidden">
+        <div className="bg-white rounded-4xl shadow-2xl shadow-slate-200/50 mb-8 border border-slate-100 overflow-hidden">
           <DashboardTabs
             activeTab={activeTab}
             setActiveTab={setActiveTab}
